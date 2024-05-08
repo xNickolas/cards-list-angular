@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card__top">
+    <button (click)="deleteCard()" type="button" class="card__close"></button>
+    <img class="card__image" [src]="card.img" alt="Card Image">
+    <span class="card__type" [ngClass]="getCardTypeClass(card.type)">{{ card.type }}</span>
+  </div>
+
+  <div class="card__body">
+    <h2 class="card__title">{{ card.title }}</h2>
+    
+    <div class="card__text">
+      <p>{{ card.description }}</p>
+    </div>
+  </div>
+</div>

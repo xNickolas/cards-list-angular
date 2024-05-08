@@ -1,0 +1,159 @@
+.card {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  height: 300px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: 10px 0 20px 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, .06);
+  color: #3a3a3a;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 6px;
+  box-shadow: 0 5px 22px -7px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease; 
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card__top {
+  position: relative;
+  max-height: 200px;
+}
+
+.card__image {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.card__close {
+  z-index: 9999;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 50%;
+  padding: 0.5em;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgb(223, 223, 223);
+  color: #c7c7c7;
+  background-color: #ffffff;
+  transition: all 0.3s ease; 
+  cursor: pointer;
+}
+
+.card__close:hover {
+  transform: rotate(90deg) scale(1.1);
+  background-color: white;
+  border: 1px solid red;
+  color: #ffffff;
+}
+
+.card__close::before, .card__close::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #303030;
+  transition: all 0.3s ease; 
+}
+
+.card__close::before {
+  width: 1px;
+  left: 11px;
+  top: 5px;
+  bottom: 5px;
+  transform: rotate(45deg);
+}
+
+.card__close::after {
+  height: 1px;
+  top: 11px;
+  left: 5px;
+  right: 5px;
+  transform: rotate(45deg);
+}
+
+.card__type {
+  position: absolute;
+  bottom: 15px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3em .5em;
+  background-color: #0359FE;
+  display: inline-block;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 4px;
+}
+
+.paisagem {
+  background-color: #0359FE;
+}
+
+.flor {
+  background-color: #FA0348;
+}
+
+.pizza {
+  background-color: #908909;
+}
+
+.card__body {
+  position: relative;
+  margin: 0 0 12px 0;
+  padding: 1rem 1rem;
+  max-height: 130px;
+  text-overflow: ellipsis;
+  overflow-y: hidden;
+}
+
+.card__title {
+  position: relative;
+  margin: 0 0 14px;
+  padding-bottom: 4px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card__title::after {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  background-color: #19A4FE;
+  content: "";
+}
+
+.card__text p {
+  margin: 0 0 24px;
+  font-size: 12px;
+  line-height: 1.1;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.card__text p:last-child {
+  margin: 0;
+}

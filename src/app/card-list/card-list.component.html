@@ -1,0 +1,11 @@
+<div class="card-list">
+  <div class="card-list__search">
+    <input class="card-list__search-input" type="text" [(ngModel)]="searchText" placeholder="Pesquisar..." (input)="applyFilter()">
+  </div>
+  
+  <div class="card-list__row">
+    <div class="card-list__container" *ngFor="let card of filteredCardList">
+      <app-card [card]="card" (delete)="deleteCard($event)"></app-card>
+    </div>
+  </div>
+</div>
